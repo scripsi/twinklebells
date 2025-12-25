@@ -1,10 +1,7 @@
 # *** MODULE IMPORTS ***
 
-from machine import Pin
-from pimoroni import Button
 import plasma
 import time
-import random
 
 # *** INITIAL CONFIG ***
 
@@ -27,16 +24,28 @@ else:
   BRIGHTNESS = config.BRIGHTNESS
   BELL_INTERVAL_MS = config.BELL_INTERVAL_MS
   LED_COLOR_ORDER = config.LED_COLOR_ORDER
-  BELL_TO_LED = config.bell_to_led
+  if config.BELL_PATTERN == 0:
+    BELL_TO_LED = [[],[],[],[],[],[],[],[],[]]
+    i = NUM_LEDS // 8
+    n = i * 8
+    for b in range(1,9):
+      for l in range((b-1)*i,b*i):
+        BELL_TO_LED[b].append(l)
+    for l in range(n,NUM_LEDS):
+      BELL_TO_LED[0].append(l)
+  elif config.BELL_PATTERN == 1:
+    BELL_TO_LED = [[],[],[],[],[],[],[],[],[]]
+    i = NUM_LEDS // 8
+    n = i * 8
+    for l in range(NUM_LEDS):
+      b = l % 8
+      BELL_TO_LED[b+1].append(l)
+  elif config.BELL_PATTERN == 2:
+    BELL_TO_LED = config.BELL_TO_LED
 
 ROUNDS = True
 
-# Board-specific setup
-
-if PLASMA_BOARD == 1: # Plasma 2040
-  print("Board is Plasma 2040")
-  led_strip = plasma.WS2812(NUM_LEDS)
-  print("Board setup complete")
+led_strip = plasma.WS2812(NUM_LEDS, color_order=LED_COLOR_ORDER)
 
 class Bell:
   def __init__(self, n, name, hue, decay):
@@ -91,21 +100,19 @@ def next_bell():
 
 # *** LED MANAGEMENT ***
 
-led_strip.start()
-
 def update_leds():
   for bell in bells:
     h = bell.hue
     v = bell.amplitude()
+    
     for led in BELL_TO_LED[bell.n]:
       led_strip.set_hsv(led, h, 1.0, v)
 
 
 # *** MAIN ROUTINE ***    
 
-print("Starting main routine")
-
 last_ring = None
+led_strip.start()
 
 while True:
   if time.ticks_diff(time.ticks_ms(), last_ring) > BELL_INTERVAL_MS:
@@ -113,5 +120,6 @@ while True:
     bells[b].ring()
     last_ring = time.ticks_ms()
     last_bell = b
+
   update_leds()
-  time.sleep_ms(10)
+  time.sleep_ms(25)

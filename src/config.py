@@ -6,11 +6,12 @@
 #  3 Plasma 2350
 #  4 Plasma 2350W
 PLASMA_BOARD = 1
-NUM_LEDS = 60
-BRIGHTNESS = 0.9
+NUM_LEDS = 50
+BRIGHTNESS = 0.7
 BELL_INTERVAL_MS = 250
 LED_COLOR_ORDER = 2 # RGB:0; RBG:1; GRB:2; GBR:3; BRG:4; BGR:5
-bell_to_led = [[0,1,58,59],
+BELL_PATTERN = 0 # 0 = in blocks; 1 = in sequences; 2 = User supplied
+BELL_TO_LED = [[0,1,58,59],
                [2,3,4,5,6,7,8],
                [9,10,11,12,13,14,15],
                [16,17,18,19,20,21,22],
