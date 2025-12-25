@@ -10,6 +10,7 @@ _Ringing in the New Year with LEDs_
  - [Hardware](#hardware)
  - [Software](#software)
  - [Advent: Raising the bells](#advent-raising-the-bells)
+ - [First Day: Rounds](#first-day-rounds)
 
 ## Introduction
 
@@ -22,12 +23,16 @@ Last year I celebrated the 12 Days of Christmas by programming my Christmas ligh
 ### About _The Nine Tailors_
 
 > 'Thank God' said Wimsey. 'Where there is a church, there is civilisation.'
+>
+> _The Nine Tailors_ - Dorothy L. Sayers
 
 _The Nine Tailors_ is a detective novel and a love-letter to country life in the English Fens where the author Dorothy L. Sayers grew up. At the beginning of the book, her hero, Lord Peter Wimsey arrives by accident in the fictional village of Fenchurch St Paul on a snowy New Year's Eve and is instantly recruited to help ring in the New Year with a full peal on the church bells. The ensuing story is threaded through with the strange and beautiful language of bells and bell-ringing as Wimsey slowly unravels the tangle of circumstances around a gruesome discovery in the churchyard. To ensure authenticity for the story, Sayers evidently spent a long time researching the peculiarly English art of change-ringing. Puzzles and ciphers are expressed in the mathematical methods of the changes, while the bells mark out the beats of the story from that joyful New Year peal, through solemn tolling for the dead, to alarms warning of a final, dramatic and deadly flood.
 
 ### About bell ringing
 
 > The art of change ringing is peculiar to the English, and, like most English peculiarities, unintelligible to the rest of the world
+>
+> _The Nine Tailors_ - Dorothy L. Sayers
 
 The [Central Council of Church Bell Ringers](https://cccbr.org.uk/) is the fount of knowledge about the history of bell ringing in England. What began as a simple and largely secular use of church bells to announce community events grew into a complex musical art form through the 17th to 19th centuries as technological advancements in bell founding allowed ever larger and better [tuned scales of bells](https://www.hibberts.co.uk/). In Europe, this eventually resulted in carillons of bells spanning several octaves of a chromatic scale and able to [play full pieces of music](https://www.youtube.com/watch?v=8WVbmDewfnQ) either by hand or mechanically-driven. In England, things took a different tack, with ringers exploring all of the possible combinations of a diatonic scale of bells in mathematical sequences. These changes or [methods](https://ringing.org/) became ever more numerous and elaborate as bell ringing teams from neighbouring parishes competed with each other to produce the longest peals with the most harmonious sound. 
 
@@ -62,6 +67,8 @@ The basic `main.py` is derived from last year's version. It imports necessary li
 ## Advent: Raising the bells
 
 > The bells gave tongue: Gaude, Sabaoth, John, Jericho, Jubilee, Dimity, Batty Thomas, and Tailor Paul, rioting and exulting high up in the dark tower, wide mouths rising and falling, brazen tongues clamouring, huge wheels turning to the dance of the leaping ropes.
+>
+> _The Nine Tailors_ - Dorothy L. Sayers
 
 So, er, I won't actually be using bells in my project. I will be using coloured lights to represent the bells and the patterns of changes as they are "rung". Nevertheless, I want to be as faithful to the ideas and principles of change-ringing as I can, by incorporating the language and notation into my programming. I also want to model the project on the story of _The Nine Tailors_, so let me introduce the bells:
 
@@ -78,7 +85,44 @@ So, er, I won't actually be using bells in my project. I will be using coloured 
 
 The eight bells form a musical octave, and are named as in the book. Each bell is represented by a different light colour, and these are chosen at simple intervals around the colour-wheel to form a rainbow gradient.
 
-In `main.py`, the bells are represented as instances of the Bell class. When they are rung, the bells have an amplitude which decays quickly. The LED string is divided into equal sections which represent each bell and the brightness of which depends on the current amplitude.
+In `main.py`, the bells are represented as instances of the Bell class. When they are rung, the bells have an amplitude which decays quickly. The different LED colours represent each bell, and the brightness depends on the bell's current amplitude.
 
 The bells are rung at 0.25 second intervals, which means that a full row of 8 bells takes about 2 seconds to ring. I chose these timings after watching several YouTube videos of bell ringing. 
+
+## First Day: Rounds
+
+I celebrate the first day of Christmas with Rounds. Rounds are usually the first and last row rung in any touch, so it seems appropriate to begin with them. The bells are simply rung repeatedly in sequence from highest to lowest:
+
+```text
+12345678
+12345678
+12345678
+12345678
+...
+```
+
+From a programming point of view, Rounds are also the simplest test that everything is working! If there are any issues with playing more complicated compositions in later days, then `main.py` will default to ringing Rounds instead. I have also added the capability to set in `config.py` the pattern of LEDs that represents each bell:
+
+```python 
+# config.py
+
+BELL_PATTERN = 0
+# -1111111222222333333444444555555666666777777888888-
+
+BELL_PATTERN = 1
+# -123456781234567812345678123456781234567812345678-
+
+BELL_PATTERN = 2
+# set a custom pattern with an array like:
+# BELL_TO_LED = [[0,1,18,19],  # None
+#                [2,3],        # 1 Gaude
+#                [4,5],        # 2 Sabaoth
+#                [6,7],        # 3 John
+#                [8,9],        # 4 Jericho
+#                [10,11],      # 5 Jubilee
+#                [12,13],      # 6 Dimity
+#                [14,15],      # 7 Batty Thomas
+#                [16,17]]      # 8 Tailor Paul
+
+```
 
