@@ -6,11 +6,11 @@ _Ringing in the New Year with LEDs_
   - [About _The Nine Tailors_](#about-the-nine-tailors)
   - [About bell ringing](#about-bell-ringing)
   - [A brief explanation of terms](#a-brief-explanation-of-terms)
-  - [About the bells](#about-the-bells)
  - [Hardware](#hardware)
  - [Software](#software)
  - [Advent: Raising the bells](#advent-raising-the-bells)
  - [First Day: Rounds](#first-day-rounds)
+ - [Second Day: Plain Hunting](#second-day-plain-hunting)
 
 ## Introduction
 
@@ -126,3 +126,14 @@ BELL_PATTERN = 2
 
 ```
 
+## Second Day: Plain Hunting
+
+Today is Boxing Day, which is traditionally the highlight of the hunting season in Britain. "Hunting" in bell ringing terminology is when one or more bells swap places in a consistent direction over a series of changes. Plain Hunting is a basic method in which all of the bells repeatedly hunt up and down through the places. In the following diagram, the blue line shows how bell 2 moves between one row and the next:  
+
+![Plain Hunting - Seconds only](./img/plain-hunting-seconds-only.png)
+
+An early book on change-ringing showed the position of bells with a blue line like this, so that learning a new method is often now referred to as "following the blue line". It is, of course, possible to pick out all of the bells in different colours, which looks like this for Plain Hunting:
+
+![Plain Hunting](./img/plain-hunting.png)
+
+While it would be relatively simple to create an algorithm which generates Plain Hunting automatically, there are many other ringing methods which would be much more difficult to program. For this reason, I have decided to load the changes for each day's method or composition from a separate file. This is a simple text file called `touch.txt` which is formatted as rows of bell numbers as shown above. `main.py` simply reads through the file one number at a time to find which bell to "ring" next. When the program reaches the end of the file it simply restarts from the beginning again. To update the Plasma 2040 with a new daily release, simply copy _both_ `main.py` and `touch.txt` to it and restart.
