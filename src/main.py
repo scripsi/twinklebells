@@ -16,6 +16,12 @@ except:
   BRIGHTNESS = 0.7
   BELL_INTERVAL_MS = 250
   LED_COLOR_ORDER = 2 # Possible values are: RGB = 0; RBG = 1; GRB = 2; GBR = 3; BRG = 4; BGR = 5
+  BELL_TO_LED = [[],[],[],[],[],[],[],[],[]]
+  i = NUM_LEDS // 8
+  n = i * 8
+  for l in range(NUM_LEDS):
+    b = l % 8
+    BELL_TO_LED[b+1].append(l)
 
 else:
   print("Config file found!")
@@ -43,7 +49,12 @@ else:
   elif config.BELL_PATTERN == 2:
     BELL_TO_LED = config.BELL_TO_LED
 
-ROUNDS = True
+try:
+  touch = open("touch.txt","rt")
+  ROUNDS = False
+except:
+  print("Couldn't open touch.txt! Ringing Rounds.")
+  ROUNDS = True
 
 led_strip = plasma.WS2812(NUM_LEDS, color_order=LED_COLOR_ORDER)
 
@@ -77,7 +88,7 @@ DIMITY = 6
 BATTY_THOMAS = 7
 TAILOR_PAUL = 8
 
-bells = [Bell(0,"NONE",0,0),
+bells = [Bell(0,"NONE",0,1),
          Bell(GAUDE,"Gaude",280/360,1000),
          Bell(SABAOTH,"Sabaoth",240/360,1100),
          Bell(JOHN,"John",200/360,1200),
@@ -96,7 +107,14 @@ def next_bell():
   if ROUNDS:
     return (last_bell % 8) + 1
   else:
-    return 8
+    t = touch.read(1)
+    while t not in ['0','1','2','3','4','5','6','7','8']:
+      if t == '':
+        print("End of touch.txt reached. Going back to the beginning!")
+        touch.seek(0)
+      t = touch.read(1)
+      
+    return int(t)
 
 # *** LED MANAGEMENT ***
 
