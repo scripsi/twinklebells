@@ -11,6 +11,7 @@ _Ringing in the New Year with LEDs_
  - [Advent: Raising the bells](#advent-raising-the-bells)
  - [First Day: Rounds](#first-day-rounds)
  - [Second Day: Plain Hunting](#second-day-plain-hunting)
+ - [Third Day: Grandsire Major](#third-day-grandsire-major)
 
 ## Introduction
 
