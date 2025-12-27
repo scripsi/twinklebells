@@ -91,6 +91,10 @@ The bells are rung at 0.25 second intervals, which means that a full row of 8 be
 
 ## First Day: Rounds
 
+> The position of the bells when struck at regular intervals from the highest bell, or "Treble" to the lowest or "Tenor" ... is called the position of rounds.
+>
+> _Change Ringing_ - Charles A. W. Troyte
+
 I celebrate the first day of Christmas with Rounds. Rounds are usually the first and last row rung in any touch, so it seems appropriate to begin with them. The bells are simply rung repeatedly in sequence from highest to lowest:
 
 ```text
@@ -128,12 +132,30 @@ BELL_PATTERN = 2
 
 ## Second Day: Plain Hunting
 
+> Hunting is the first part of change ringing which it is necessary to understand. It is of two sorts "hunting up" and "hunting down."
+>
+> _Change Ringing_ - Charles A. W. Troyte
+
 Today is Boxing Day, which is traditionally the highlight of the hunting season in Britain. "Hunting" in bell ringing terminology is when one or more bells swap places in a consistent direction over a series of changes. Plain Hunting is a basic method in which all of the bells repeatedly hunt up and down through the places. In the following diagram, the blue line shows how bell 2 moves between one row and the next:  
 
-![Plain Hunting - Seconds only](./img/plain-hunting-seconds-only.png)
+![Plain Hunting - Seconds only](./img/02-plain-hunting-seconds-only.svg)
 
 An early book on change-ringing showed the position of bells with a blue line like this, so that learning a new method is often now referred to as "following the blue line". It is, of course, possible to pick out all of the bells in different colours, which looks like this for Plain Hunting:
 
-![Plain Hunting](./img/plain-hunting.png)
+![Plain Hunting](./img/02-plain-hunting.svg)
 
 While it would be relatively simple to create an algorithm which generates Plain Hunting automatically, there are many other ringing methods which would be much more difficult to program. For this reason, I have decided to load the changes for each day's method or composition from a separate file. This is a simple text file called `touch.txt` which is formatted as rows of bell numbers as shown above. `main.py` simply reads through the file one number at a time to find which bell to "ring" next. When the program reaches the end of the file it simply restarts from the beginning again. To update the Plasma 2040 with a new daily release, simply copy _both_ `main.py` and `touch.txt` to it and restart.
+
+## Third Day: Grandsire Major
+
+> 'Now, boys, if you be ready, we'll ring a little touch of 96, just to put this gentleman in the way of it, like. You'll remember, my lord, that you starts by making the first snapping lead with the treble and after that you goes into the slow hunt till she comes down to snap with you again.' 
+>
+> _The Nine Tailors_ - Dorothy L. Sayers
+
+In the book, Lord Wimsey joins a practice session on handbells at the Rectory in the early evening before ringing the New Year peal in the church. The method isn't named, but the text gives a few clues, which is why I have chosen Grandsire Major for today's method. Here is the first part of the method:
+
+![Grandsir Major](./img/03-grandsire-major.svg)
+
+Lord Peter is ringing the Number 2 bell (blue line), which begins by swapping the lead with the treble (purple line) and then hunting down through the pattern before meeting the treble again. Choosing to ring this method is a kindly reintroduction for Wimsey, because the Number 2 bell just has to follow the Treble's lead, while the other bells have more work to do.
+
+Today's touch is taken from the excellent [Composition Library](https://complib.org/) website, which has thousands of bell ringing methods and compositions available for download and free non-commercial use. I will be relying on this website for most of the remaining days' touches!
