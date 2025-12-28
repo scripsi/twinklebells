@@ -160,3 +160,19 @@ In the book, Lord Wimsey joins a practice session on handbells at the Rectory in
 Lord Peter is ringing the Number 2 bell (blue line), which begins by swapping the lead with the treble (purple line) and then hunting down through the pattern before meeting the treble again. Choosing to ring this method is a kindly reintroduction for Wimsey, because the Number 2 bell just has to follow the Treble's lead, while the other bells have more work to do.
 
 Today's touch is taken from the excellent [Composition Library](https://complib.org/) website, which has thousands of bell ringing methods and compositions available for download and free non-commercial use. I will be relying on this website for most of the remaining days' touches!
+
+## Fourth Day: 704 Kent Treble Bob Major
+
+> 'The gentleman will do well enough,' agreed Mr Lavender. 'Now, boys, once again. What 'ull we make it this time, sir?'
+>
+> 'Make it a 704,' said the Rector, consulting his watch. 'Call her in the middle with a double, before, wrong and home, and repeat.'
+>
+> _The Nine Tailors_ - Dorothy L. Sayers
+
+The practice session continues with a longer touch, probably of the Kent Treble Bob Major that Wimsey will be ringing with them later that night.
+
+Part of my aim in doing this 12 Days project was to better understand the often baffling phrases in the book. So what does "Call her in the middle with a double, before, wrong and home" actually mean?
+
+A bell ringing performance will have a conductor who's job it is to keep track of progress and **Call** out the names of methods and changes at important points in the touch to keep everyone on track. In this case, the conductor is Hezekiah Lavender, who rings the Tenor bell. Calls can be used to introduce variations to the basic method by making one or more bells "dodge" (change direction) between changes. Such variations can include a Bob, a Single or a **Double**. The exact timing of a call - the calling position - affects which bells make the variation. According to [Calling it Round](https://callingitround.cccbr.org.uk/docs/calling/3_demystifying_in_out_make/), an introductory text on the Central Council of Church Bell Ringers website, the terms **Before**, **Wrong** and **Home** are "calling positions relative to a specific observation bell" which would probably be the Tenor rung by Mr Lavender.
+
+Being able to define terms is only half the story. After a deal of reading around the theory, I still feel that I have barely comprehended what it all means. Calling changes is fundamentally a performance art, and I suspect that it is only by being present in that performance can you truly begin to understand how they work!
