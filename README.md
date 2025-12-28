@@ -12,6 +12,7 @@ _Ringing in the New Year with LEDs_
  - [First Day: Rounds](#first-day-rounds)
  - [Second Day: Plain Hunting](#second-day-plain-hunting)
  - [Third Day: Grandsire Major](#third-day-grandsire-major)
+ - [Fourth Day: 704 Kent Treble Bob Major](#fourth-day-704-kent-treble-bob-major)
 
 ## Introduction
 
@@ -171,7 +172,7 @@ Today's touch is taken from the excellent [Composition Library](https://complib.
 
 The practice session continues with a longer touch, probably of the Kent Treble Bob Major that Wimsey will be ringing with them later that night.
 
-Part of my aim in doing this 12 Days project was to better understand the often baffling phrases in the book. So what does "Call her in the middle with a double, before, wrong and home" actually mean?
+Part of my aim in doing this 12 Days project is to better understand the often baffling phrases in the book. So what does "Call her in the middle with a double, before, wrong and home" actually mean?
 
 A bell ringing performance will have a conductor who's job it is to keep track of progress and **Call** out the names of methods and changes at important points in the touch to keep everyone on track. In this case, the conductor is Hezekiah Lavender, who rings the Tenor bell. Calls can be used to introduce variations to the basic method by making one or more bells "dodge" (change direction) between changes. Such variations can include a Bob, a Single or a **Double**. The exact timing of a call - the calling position - affects which bells make the variation. According to [Calling it Round](https://callingitround.cccbr.org.uk/docs/calling/3_demystifying_in_out_make/), an introductory text on the Central Council of Church Bell Ringers website, the terms **Before**, **Wrong** and **Home** are "calling positions relative to a specific observation bell" which would probably be the Tenor rung by Mr Lavender.
 
