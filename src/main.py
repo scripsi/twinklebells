@@ -110,7 +110,6 @@ def next_bell():
     t = touch.read(1)
     while t not in ['0','1','2','3','4','5','6','7','8']:
       if t == '':
-        print("End of touch.txt reached. Going back to the beginning!")
         touch.seek(0)
       t = touch.read(1)
       
@@ -135,7 +134,8 @@ led_strip.start()
 while True:
   if time.ticks_diff(time.ticks_ms(), last_ring) > BELL_INTERVAL_MS:
     b = next_bell()
-    bells[b].ring()
+    if b > 0:
+      bells[b].ring()
     last_ring = time.ticks_ms()
     last_bell = b
 

@@ -13,6 +13,7 @@ _Ringing in the New Year with LEDs_
  - [Second Day: Plain Hunting](#second-day-plain-hunting)
  - [Third Day: Grandsire Major](#third-day-grandsire-major)
  - [Fourth Day: 704 Kent Treble Bob Major](#fourth-day-704-kent-treble-bob-major)
+ - [Fifth Day: Back to Rounds, with a brief pause](#fifth-dayay-back-to-rounds-with-a-brief-pause)
 
 ## Introduction
 
@@ -177,3 +178,32 @@ Part of my aim in doing this 12 Days project is to better understand the often b
 A bell ringing performance will have a conductor who's job it is to keep track of progress and **Call** out the names of methods and changes at important points in the touch to keep everyone on track. In this case, the conductor is Hezekiah Lavender, who rings the Tenor bell. Calls can be used to introduce variations to the basic method by making one or more bells "dodge" (change direction) between changes. Such variations can include a Bob, a Single or a **Double**. The exact timing of a call - the calling position - affects which bells make the variation. According to [Calling it Round](https://callingitround.cccbr.org.uk/docs/calling/3_demystifying_in_out_make/), an introductory text on the Central Council of Church Bell Ringers website, the terms **Before**, **Wrong** and **Home** are "calling positions relative to a specific observation bell" which would probably be the Tenor rung by Mr Lavender.
 
 Being able to define terms is only half the story. After a deal of reading around the theory, I still feel that I have barely comprehended what it all means. Calling changes is fundamentally a performance art, and I suspect that it is only by being present in that performance can you truly begin to understand how they work!
+
+## Fifth Day: Back to Rounds, with a brief pause
+
+> His next stroke being a hand stroke, he will allow exactly double that interval to intervene between the striking of the Tenor and his own, and thus he will continue, causing the rounds to run in this manner,-
+>
+> ```
+>  HAND BACK  HAND BACK  HAND BACK
+> 12345123450123451234501234512345  
+> ```
+>
+> _Change Ringing_ - Charles A. W. Troyte
+
+As a geek, it is easy to get carried away with the formal beauty and mathematical structure of bell ringing methods, but bells are more than just numbers in a text file. Bells have mass and momentum, ropes and mechanisms, tuning and timbre. They are not swinging passively back and forth like pendulums, but are moving under the careful control of skilled people working in concert to create a performance. These subtleties are hard to reproduce in a simple microprocessor program, but there are perhaps some things I can do to make it feel more realistic.
+
+English church bells are rung by pulling on a rope running round the edge of a large wheel attached to each bell. The bell swings slightly more than 360 degrees at each stroke, first releasing and then rewinding the rope, which is why this is called [full circle ringing](https://www.ringing.info/beginners/ringing.htm#label2). The rope is attached to the wheel asymmetrically, meaning that it finishes at a different height at the end of a forward and return swing, affecting how the ringer pulls the bell in each direction. The first, forward swing is called the **Hand-Stroke**, and the return swing is the **Back-Stroke**.
+
+The rows in a touch will alternate between hand-stroke and back-stroke. A brief, "hand-stroke pause" is often included between the end of a back-stroke row and the start of the next hand-stroke row, as described by [Troyte](https://www.google.co.uk/books/edition/Change_Ringing/WxZPAAAAMAAJ?hl=en&gbpv=1&pg=PA8&printsec=frontcover) (page 8). I follow Troyte's example of using a "0" (zero) to indicate a brief pause equal in time to one bell's place (about 0.25 seconds). Adding a zero to alternate rows in `touch.txt` creates the hand-stroke pause described above. It would also be possible to include longer pauses made up of strings of zeroes, if necessary.
+
+Here is today's version of Rounds with the hand-stroke pause included:
+
+```text
+# touch.txt
+12345678
+123456780
+12345678
+123456780
+
+```
+
