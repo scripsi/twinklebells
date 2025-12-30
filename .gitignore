@@ -210,3 +210,7 @@ __marimo__/
 .micropico
 
 dev/
+.python-version
+pyproject.toml
+uv.lock
+
