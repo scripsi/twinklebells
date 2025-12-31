@@ -15,6 +15,7 @@ _Ringing in the New Year with LEDs_
  - [Fourth Day: 704 Kent Treble Bob Major](#fourth-day-704-kent-treble-bob-major)
  - [Fifth Day: Back to Rounds, with a brief pause](#fifth-dayay-back-to-rounds-with-a-brief-pause)
  - [Sixth Day: 5040 Stedman's Triples](#sixth-day-5040-stedmans-triples)
+ - [Seventh Day: The Nine Tailors](#seventh-day-the-nine-tailors)
 
 ## Introduction
 
