@@ -210,11 +210,23 @@ Here is today's version of Rounds with the hand-stroke pause included:
 
 ## Sixth Day: 5040 Stedman's Triples
 
-> We're going to have a try at Stedman's. They're difficult to ring, are Stedman's, but very fine music when you get them going proper.
+> 'We're going to have a try at Stedman's. They're difficult to ring, are Stedman's, but very fine music when you get them going proper.'
 >
 > _The Nine Tailors_ - Dorothy L. Sayers
 
 It's time to try a full peal of 5040 rows, which should take just under 3 hours to ring. The [particular touch I am using](https://complib.org/composition/28923) was composed by Thomas Thurstans and was [first rung](https://bb.ringingworld.co.uk/view.php?id=1401420) by the Ancient Society of College Youths at St. Andrew, Enfield, Middlesex on Sunday, 26th January 1851 in 2 hours and 53 minutes. The composition was rung frequently through the late 19th and early 20th Century, and is quite possibly the one rung in _The Nine Tailors_ for Easter Sunday at Fenchurch St. Paul.
 
-Triples are meant to be rung on a stage of 7 bells, but they can also be rung on the top 7 bells of a stage of 8. In that case, the Tenor bell **Covers** by always ringing at the end of each row instead of hunting up and down with the rest of the bells. The touch as downloaded from Composition Library is only for 7 bells, so I need some way to add the number 8 (Tenor) to the end of each row (hand editing the file would be impractical!) I thought about altering `main.py` on the Plasma2040 to allow the automatic inclusion of covering bells and hand-stroke pauses (see Day 5), but this would considerably complicate the logic of the main loop, and I rather like its current simplicity. Instead, I have decided to write a separate Python script, `utils/retouch.py`, to use on my computer to refactor touch.txt before it gets uploaded to the Plasma2040.
+Triples are meant to be rung on a stage of 7 bells, but they can also be rung on the top 7 bells of a stage of 8. In that case, the Tenor bell **Covers** by always ringing at the end of each row instead of hunting up and down with the rest of the bells. The touch as downloaded from Composition Library is only for 7 bells, so I need some way to add the number 8 (Tenor) to the end of each row (hand editing the file would be impractical!) I thought about altering `main.py` on the Plasma2040 to allow the automatic inclusion of covering bells and hand-stroke pauses (see Day 5), but this would considerably complicate the logic of the main loop, and I rather like its current simplicity. Instead, I have decided to write a separate Python script, `utils/retouch.py`, to use on my computer to refactor `touch.txt` before it gets uploaded to the Plasma2040.
+
+## Seventh Day: The Nine Tailors
+
+> Toll-toll-toll; and a pause; toll-toll-toll; and a pause; toll-toll-toll; the nine tailors, or teller-strokes, that mark the passing of a man. The year is dead; toll him out with twelve strokes more, one for every passing month.
+>
+> _The Nine Tailors_ - Dorothy L. Sayers
+
+It is New Year's Eve. The old year is almost dead, so it is time for the nine tailors. Sayers takes the title of her book from the tolling bell [traditionally used to announce the death of someone in the village](https://www.treblesgoing.org.uk/ninetailors.html). The nine tailors rung on Tailor Paul by Hezekiah Lavender at New Year foreshadow the times that they are rung later in the story to announce the deaths of characters in the book.
+
+Creating `touch.txt` for the nine tailors simply involves successive rows where only the Tenor (number 8) rings, with long strings of zeros in between for the pauses.
+
+I've also made a change to the behaviour of `main.py` in response to yesterday's peal of 5040 Stedman's Triples. When ringing long peals, I want to be able to control when they start and to know when they end, rather than letting them repeat continuously. To do this I have enabled Button A on the Plasma2040. Now, when `main.py` is started, it will "raise the bells" by ringing all 8 of them once and then wait for you to press Button A to start playing the touch (equivalent to the conductor shouting "Go!" to the ringers). Then, if `touch.txt` contains a 9 the main loop will pause at that point and wait for you to press Button A again. To trigger a pause at the end of a touch, rather than it going straight back to the beginning and running again, simply add a 9 to the end of `touch.txt`. 
 

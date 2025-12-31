@@ -1,6 +1,7 @@
 # *** MODULE IMPORTS ***
 
 import plasma
+from pimoroni import Button
 import time
 
 # *** INITIAL CONFIG ***
@@ -57,6 +58,7 @@ except:
   ROUNDS = True
 
 led_strip = plasma.WS2812(NUM_LEDS, color_order=LED_COLOR_ORDER)
+button_a = Button("BUTTON_A")
 
 class Bell:
   def __init__(self, n, name, hue, decay):
@@ -108,7 +110,7 @@ def next_bell():
     return (last_bell % 8) + 1
   else:
     t = touch.read(1)
-    while t not in ['0','1','2','3','4','5','6','7','8']:
+    while t not in ['0','1','2','3','4','5','6','7','8','9']:
       if t == '':
         touch.seek(0)
       t = touch.read(1)
@@ -131,13 +133,23 @@ def update_leds():
 last_ring = None
 led_strip.start()
 
+# Raise the bells
+for bell in bells:
+  bell.ring()
+
+go = False
 while True:
-  if time.ticks_diff(time.ticks_ms(), last_ring) > BELL_INTERVAL_MS:
-    b = next_bell()
-    if b > 0:
-      bells[b].ring()
-    last_ring = time.ticks_ms()
-    last_bell = b
+  if button_a.read():
+    go = True
+  if go:
+    if time.ticks_diff(time.ticks_ms(), last_ring) > BELL_INTERVAL_MS:
+      last_ring = time.ticks_ms()
+      b = next_bell()
+      if b == 9:
+        go = False
+      elif b > 0:
+        bells[b].ring()
+        last_bell = b
 
   update_leds()
   time.sleep_ms(25)
