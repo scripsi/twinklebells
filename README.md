@@ -16,6 +16,7 @@ _Ringing in the New Year with LEDs_
  - [Fifth Day: Back to Rounds, with a brief pause](#fifth-dayay-back-to-rounds-with-a-brief-pause)
  - [Sixth Day: 5040 Stedman's Triples](#sixth-day-5040-stedmans-triples)
  - [Seventh Day: The Nine Tailors](#seventh-day-the-nine-tailors)
+ - [Eighth Day: 15480 Kent Treble Bob Major](#eighth-day-15840-kent-treble-bob-major)
 
 ## Introduction
 
@@ -229,5 +230,25 @@ It is New Year's Eve. The old year is almost dead, so it is time for the nine ta
 
 Creating `touch.txt` for the nine tailors simply involves successive rows where only the Tenor (number 8) rings, with long strings of zeros in between for the pauses.
 
-I've also made a change to the behaviour of `main.py` in response to yesterday's peal of 5040 Stedman's Triples. When ringing long peals, I want to be able to control when they start and to know when they end, rather than letting them repeat continuously. To do this I have enabled Button A on the Plasma2040. Now, when `main.py` is started, it will "raise the bells" by ringing all 8 of them once and then wait for you to press Button A to start playing the touch (equivalent to the conductor shouting "Go!" to the ringers). Then, if `touch.txt` contains a 9 the main loop will pause at that point and wait for you to press Button A again. To trigger a pause at the end of a touch, rather than it going straight back to the beginning and running again, simply add a 9 to the end of `touch.txt`. 
+I've also made a change to the behaviour of `main.py` in response to yesterday's peal of 5040 Stedman's Triples. When ringing long peals, I want to be able to control when they start and to know when they end, rather than letting them repeat continuously. To do this I have enabled Button A on the Plasma2040. Now, when `main.py` is started, it will "raise the bells" by ringing all 8 of them once and then wait for you to press Button A to start playing the touch (equivalent to the conductor shouting "Go!" to the ringers). Then, if `touch.txt` contains a 9 the main loop will pause at that point and wait for you to press Button A again. To trigger a pause at the end of a touch, rather than it going straight back to the beginning and running again, simply add a 9 to the end of `touch.txt`.
+
+## Eighth Day: 15480 Kent Treble Bob Major
+
+> 'Bless my heart!' said Wimsey. 'Fifteen thousand-'
+>
+> 'Eight hundred and forty,' said the Rector.
+>
+> Wimsey made a rapid calculation.
+>
+> 'A good many hours' work there.'
+>
+> 'Nine hours,' said the Rector, with relish.
+>
+> 'Well done, sir,' said Wimsey.
+
+This is the big one! It's New Year's Day and time to ring the same marathon peal that Lord Wimsey joins in with at New Year in the beginning of the book. Just like in the book, I set the nine tailors going just before midnight on New Year's Eve. Then I started the touch of 15,480 Kent Treble Bob Major on the stroke of midnight so that the first row of rounds lit up as the fireworks exploded above the castle here in Edinburgh and the refrain of _Auld Lang Syne_ drifted up from the revellers in the street.
+
+Happy New Year!
+
+
 
