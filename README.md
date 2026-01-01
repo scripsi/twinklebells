@@ -245,8 +245,10 @@ I've also made a change to the behaviour of `main.py` in response to yesterday's
 > 'Nine hours,' said the Rector, with relish.
 >
 > 'Well done, sir,' said Wimsey.
+>
+> _The Nine Tailors_ - Dorothy L. Sayers
 
-This is the big one! It's New Year's Day and time to ring the same marathon peal that Lord Wimsey joins in with at New Year in the beginning of the book. Just like in the book, I set the nine tailors going just before midnight on New Year's Eve. Then I started the touch of 15,480 Kent Treble Bob Major on the stroke of midnight so that the first row of rounds lit up as the fireworks exploded above the castle here in Edinburgh and the refrain of _Auld Lang Syne_ drifted up from the revellers in the street.
+This is the big one! It's New Year's Day and time to ring the same marathon peal that Lord Peter Wimsey joins in with at New Year in the beginning of the book. Just like in the book, I set the nine tailors going just before midnight on New Year's Eve. Then I started the touch of 15,480 Kent Treble Bob Major on the stroke of midnight so that the first row of rounds lit up as the fireworks exploded above the castle here in Edinburgh and the refrain of _Auld Lang Syne_ drifted up from the revellers in the street.
 
 Happy New Year!
 
