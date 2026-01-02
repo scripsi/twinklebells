@@ -16,7 +16,8 @@ _Ringing in the New Year with LEDs_
  - [Fifth Day: Back to Rounds, with a brief pause](#fifth-dayay-back-to-rounds-with-a-brief-pause)
  - [Sixth Day: 5040 Stedman's Triples](#sixth-day-5040-stedmans-triples)
  - [Seventh Day: The Nine Tailors](#seventh-day-the-nine-tailors)
- - [Eighth Day: 15480 Kent Treble Bob Major](#eighth-day-15840-kent-treble-bob-major)
+ - [Eighth Day: 15840 Kent Treble Bob Major](#eighth-day-15840-kent-treble-bob-major)
+ - [Ninth Day: Holt's Ten-part Peal](#ninth-day-holts-ten-part-peal)
 
 ## Introduction
 
@@ -232,7 +233,7 @@ Creating `touch.txt` for the nine tailors simply involves successive rows where 
 
 I've also made a change to the behaviour of `main.py` in response to yesterday's peal of 5040 Stedman's Triples. When ringing long peals, I want to be able to control when they start and to know when they end, rather than letting them repeat continuously. To do this I have enabled Button A on the Plasma2040. Now, when `main.py` is started, it will "raise the bells" by ringing all 8 of them once and then wait for you to press Button A to start playing the touch (equivalent to the conductor shouting "Go!" to the ringers). Then, if `touch.txt` contains a 9 the main loop will pause at that point and wait for you to press Button A again. To trigger a pause at the end of a touch, rather than it going straight back to the beginning and running again, simply add a 9 to the end of `touch.txt`.
 
-## Eighth Day: 15480 Kent Treble Bob Major
+## Eighth Day: 15840 Kent Treble Bob Major
 
 > 'Bless my heart!' said Wimsey. 'Fifteen thousand-'
 >
@@ -248,9 +249,19 @@ I've also made a change to the behaviour of `main.py` in response to yesterday's
 >
 > _The Nine Tailors_ - Dorothy L. Sayers
 
-This is the big one! It's New Year's Day and time to ring the same marathon peal that Lord Peter Wimsey joins in with at New Year in the beginning of the book. Just like in the book, I set the nine tailors going just before midnight on New Year's Eve. Then I started the touch of 15,480 Kent Treble Bob Major on the stroke of midnight so that the first row of rounds lit up as the fireworks exploded above the castle here in Edinburgh and the refrain of _Auld Lang Syne_ drifted up from the revellers in the street.
+This is the big one! It's New Year's Day and time to ring the same marathon peal that Lord Peter Wimsey joins in with at New Year in the beginning of the book. Just like in the book, I set the nine tailors going just before midnight on New Year's Eve. Then I started the touch of 15,840 Kent Treble Bob Major on the stroke of midnight so that the first row of rounds lit up as the fireworks exploded above the castle here in Edinburgh and the refrain of _Auld Lang Syne_ drifted up from the revellers in the street.
 
 Happy New Year!
+
+## Ninth Day: Holt's Ten-part Peal
+
+> '...I remember it very well. I was a youngster at the time, and their wedding-bells was the first long peal I ever rang. We gave them 5,040 Grandsire Triples, Holt's Ten-part Peal - you'll find the record of it in the church yonder...'
+>
+> _The Nine Tailors_ - Dorothy L. Sayers
+
+Today's full peal is an old one: the [Ten Part Peal](https://complib.org/composition/29040) composed by [John Holt](https://en.wikipedia.org/wiki/John_Holt_(composer)) in the early 1750s. It is a popular composition that has been rung frequently since it was composed. Once again, it is a Triple, so the Tenor bell has to cover.
+
+
 
 
 
